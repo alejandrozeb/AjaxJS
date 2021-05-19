@@ -12,6 +12,18 @@ $(document).ready(function(){
 
     //desde el id
     //$('#boton').html("Cambiado desde id");
+
+    //cambia todas las etiquetas
+    //$('button').html("cambiado desde etiqueta");
+
+    //cambia con id de un contenedor
+    $('#subcontenedor button').html("cambiado desde contenedor");
+
+    //al primer boton
+    $('button:first').html("primero");
+
+    //al ultimo
+    $('button:last').html("last");
 });
 
 //con js puro
