@@ -8,5 +8,12 @@ $(document).ready(function(){
     //$('button').html("Cambiado desde Jquery");
 
     //desde la clase    
-    $('.btn').html("Cambiado desde su clase");
+    //$('.btn').html("Cambiado desde su clase");
+
+    //desde el id
+    //$('#boton').html("Cambiado desde id");
 });
+
+//con js puro
+
+//document.querySelector('#boton').innerHTML = "cambiado desde js puro";
