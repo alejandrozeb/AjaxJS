@@ -1,3 +1,6 @@
 $(document).ready(function(){
-    alert("Hola mundo desde Jquery");
+    //sleccionamos por el tag
+    //muetsra el contenido del tag
+    let varBoton = $('button').html();
+    console.log(varBoton);
 });
