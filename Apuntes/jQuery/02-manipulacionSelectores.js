@@ -20,4 +20,11 @@ $(document).ready(function(){
     //para cambiar en bloque
     $('#boton').css({'color':'yellow', 'background-color':'blue'});
 
+    //removiendo tag de html
+    //$('#subcontenedor').remove();
+
+    //ocultando el contenido dispaly: none;
+    //$('#subcontenedor').hide();
+
+
 });
