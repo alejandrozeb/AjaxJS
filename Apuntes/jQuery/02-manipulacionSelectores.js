@@ -26,5 +26,16 @@ $(document).ready(function(){
     //ocultando el contenido dispaly: none;
     //$('#subcontenedor').hide();
 
+    //cambiando una imagen por otra
+    $('img').attr('src', 'imagen2.png');
+
+    //cambiando el tamaño
+    $('img').attr('width', '300px');
+
+    //igual se pueden modificar como objeto
+
+    $('img').attr({'src':'imagen2.png' ,'width':'300px'});
+
+
 
 });
