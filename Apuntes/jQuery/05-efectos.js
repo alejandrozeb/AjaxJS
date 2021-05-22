@@ -22,5 +22,37 @@ $(document).ready(function () {
         $('img').toggle(300);
     });
 
+    $('#subcontenedor button:nth-child(7)').click(function (e) { 
+        e.preventDefault();
+        //aparece con otro efecto
+        $('img').fadeIn(300);
+    });
+
+    $('#subcontenedor button:nth-child(8)').click(function (e) { 
+        e.preventDefault();
+        //desaparece con otro efecto
+        $('img').fadeOut(300);
+    });
+
+    $('#subcontenedor button:nth-child(9)').click(function (e) { 
+        e.preventDefault();
+        //desaparece con otro efecto
+        $('img').slideDown(300);
+    });
+
+    $('#subcontenedor button:nth-child(10)').click(function (e) { 
+        e.preventDefault();
+        //desaparece con otro efecto
+        $('img').slideUp(300);
+    });
+
+    $('#subcontenedor button:nth-child(11)').click(function (e) { 
+        e.preventDefault();
+        //desaparece con otro efecto
+        $('img').slideToggle(300);
+    });
+
+
+
 
   });
