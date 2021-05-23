@@ -10,21 +10,42 @@
 </head>
 <body>
     <div class="container mt-4">
-        <select class="chosen-select">
-            <option value=""></option>
-            <option value="Uno">Uno</option>
-            <option value="Dos">Dos</option>
-            <option value="Tres">Tres</option>
-            <option value="Cuatro">Cuatro</option>
-            <option value="Cinco">Cinco</option>
-            <option value="Seis">Seis</option>
-            <option value="Siete">Siete</option>
-            <option value="Ocho">Ocho</option>
-            <option value="Nueve">Nueve</option>
-            <option value="Diez">Diez</option>
-        </select>
+        <div class="row">
+            <div class="col-sm">
+                <select class="chosen-select">
+                    <option value="">Selecciona un numero</option>
+                    <option value="Uno">Uno</option>
+                    <option value="Dos">Dos</option>
+                    <option value="Tres">Tres</option>
+                    <option value="Cuatro">Cuatro</option>
+                    <option value="Cinco">Cinco</option>
+                    <option value="Seis">Seis</option>
+                    <option value="Siete">Siete</option>
+                    <option value="Ocho">Ocho</option>
+                    <option value="Nueve">Nueve</option>
+                    <option value="Diez">Diez</option>
+                </select>
+            </div>
+            <!-- permite seleccionar mas de uno -->
+            <div class="col-sm">
+                <select class="chosen-select" multiple>
+                    <option value="">Selecciona un numero</option>
+                    <option value="Uno">Uno</option>
+                    <option value="Dos">Dos</option>
+                    <option value="Tres">Tres</option>
+                    <option value="Cuatro">Cuatro</option>
+                    <option value="Cinco">Cinco</option>
+                    <option value="Seis">Seis</option>
+                    <option value="Siete">Siete</option>
+                    <option value="Ocho">Ocho</option>
+                    <option value="Nueve">Nueve</option>
+                    <option value="Diez">Diez</option>
+                </select>
+            </div>
+        </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="chosen/chosen.jquery.min.js"></script>
+    <script src="07-chosenJavaScript.js"></script>
 </body>
 </html>
