@@ -17,4 +17,22 @@ $(document).ready(function () {
         }
         );
     });
+
+    //para subir con scroll animado
+    $('#subir').click(function (e) { 
+        e.preventDefault();
+        //scroll up
+        $('html, body').animate({
+            scrollTop:0
+        }, 1000);
+    });
+
+    //para bajar con scroll animado
+    $('#bajar').click(function (e) { 
+        e.preventDefault();
+        //scroll up
+        $('html, body').animate({
+            scrollTop: $(document).height() - $(window).height()
+        }, 1000);
+    });
 });
