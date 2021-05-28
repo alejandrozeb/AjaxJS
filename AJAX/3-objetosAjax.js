@@ -12,8 +12,21 @@ $(document).ready(function () {
                  <li> ${item.nombre} -- ${item.puesto} -- ${item.edad}  </li>
                  `);
             });
+        });
+    });
 
-           
+        $('#leerGetJSON').click(function (e) { 
+        e.preventDefault();
+        //de un documento txt trae como string
+        $.get("empleados.txt", function(data){
+            //cambio a json
+            data = JSON.parse(data);
+            console.log(data);
+        });
+
+        //con JSON de un txt trae como json
+        $.getJSON("empleados.txt", function(data){
+            console.log(data);
         });
     });
 });
