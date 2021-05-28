@@ -18,15 +18,38 @@ $(document).ready(function () {
         $('#leerGetJSON').click(function (e) { 
         e.preventDefault();
         //de un documento txt trae como string
-        $.get("empleados.txt", function(data){
+       // $.get("empleados.txt", function(data){
             //cambio a json
-            data = JSON.parse(data);
-            console.log(data);
-        });
+          //  data = JSON.parse(data);
+           // console.log(data);
+        //});
 
         //con JSON de un txt trae como json
-        $.getJSON("empleados.txt", function(data){
-            console.log(data);
+        $.getJSON("empleados.json", function(data){
+            console.log(data.empleados);
+            console.log(data.temporales);
+            $('#listaEmpleados').html('');
+            //recorriendo un objeto
+            $.each(data.temporales, function (index, item) {
+                //concatenando 
+                 $('#listaEmpleados').html($('#listaEmpleados').html() +`
+                 <li> ${item.nombre} -- ${item.puesto} -- ${item.edad}  </li>
+                 `);
+            });
         });
+    });
+
+
+
+
+
+
+
+
+    //buscador
+
+    let empleados;
+    $.getJSON("empleados.txt", function(data){
+        empleados = data
     });
 });
