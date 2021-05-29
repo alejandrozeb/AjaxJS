@@ -39,17 +39,23 @@ $(document).ready(function () {
         });
     });
 
-
-
-
-
-
-
-
     //buscador
 
     let empleados;
-    $.getJSON("empleados.txt", function(data){
-        empleados = data
+    $.getJSON("empleados.json", function(data){
+        empleados = data.empleados;
+        //dejar de soltar la tecla
+        $('#nombre').keyup(function (e) { 
+            $('#listaEmpleados').html('');
+            let nombre = $(this).val();
+            $.each(empleados, function (indexInArray, item) { 
+                 //comparando valores
+                 if(item.nombre.toLowerCase().indexOf(nombre.toLowerCase()) !== -1){
+                    $('#listaEmpleados').html($('#listaEmpleados').html() +`
+                    <li> ${item.nombre} -- ${item.puesto} -- ${item.edad}  </li>
+                    `);
+                 }
+            });
+        });
     });
 });
