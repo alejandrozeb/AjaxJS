@@ -12,8 +12,21 @@ $(document).ready(function () {
             //cuando es exitoso
             success: function(data){
                 console.log(data);
+                $.each(data.empleados, function (i, item) { 
+                     $('#listaEmpleados').html($("#listaEmpleados").html() + `
+                     <li> ${item.nombre} </li>
+                     `);
+                });
+            },
+            //devuelve un xml
+            error: function(xhr, status, error){
+                ///todo el camino
+                console.log(xhr);
+                //estatus de la consulta
+                console.log(status);
+                //erro
+                console.log(error);
             }
-
 
         });
     });
