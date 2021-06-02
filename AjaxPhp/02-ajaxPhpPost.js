@@ -10,11 +10,20 @@ $(document).ready(function () {
         {
             nombre,
             puesto
-        },
-            function (data, textStatus, jqXHR) {
-                console.log(data);
-                $('#res').html(data);        
-            },
+        },function (data, textStatus, jqXHR) {
+                $('#res').removeClass('.d-none');
+                $('#res').html(data);          
+            }
+        ).done(function(){
+            $('#estado').html("exito");
+            $('#estado').addClass("alert-success");
+            $('#estado').removeClass("d-none");
+        }).fall(function(){
+            $('#estado').html("Fallo");
+            $('#estado').addClass("alert-danger");
+            $('#estado').removeClass("d-none");            
+        }).always(
+            console.log("finalizo")
         );
     });
 });
