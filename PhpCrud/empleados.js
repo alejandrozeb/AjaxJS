@@ -4,6 +4,7 @@ $(document).ready(function () {
 
         $('#listaEmpleados').html('');
         $.getJSON("http://localhost/AjaxPhpJq/AjaxJS/PhpCrud/empleados.php",
+        {"accion": "leer"},
             function (data, textStatus, jqXHR) {
                 $.each(data, function (index, item) { 
                      $('#listaEmpleados').html(
@@ -15,5 +16,18 @@ $(document).ready(function () {
                 });
             }
         );
+    });
+
+    $('#crearEmpleado').click(function (e) { 
+        e.preventDefault();
+        let nombre = $('#nombre').val();
+        let puesto = $('#puesto').val();
+        let edad = $('#edad').val();
+
+        $.post('http://localhost/AjaxPhpJq/AjaxJS/PhpCrud/empleados.php',
+        {"accion": "insertar",nombre,puesto,edad},
+        function(data){
+            console.log(data);
+        });
     });
 });
