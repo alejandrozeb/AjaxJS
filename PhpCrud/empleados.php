@@ -6,7 +6,7 @@ $pass = '';
 $bd = "empleados";
 $mysql = new mysqli($servidor, $usuario, $pass, $bd, 3308);
 
-if($_REQUEST['accion' == 'leer']){
+if($_REQUEST['accion'] == 'leer'){
     $arreglo = array();
     $consulta = "SELECT id,nombre,puesto, edad FROM empleados";
 
@@ -17,13 +17,13 @@ if($_REQUEST['accion' == 'leer']){
         echo json_encode($arreglo);
     }
     $result->close();
-}else if($_REQUEST['accion' == 'insertar']){
+}else if($_REQUEST['accion'] == 'insertar'){
     $data = $_POST["nombre"];
-    $sql = "INSERT into empleados (nombre, puesto, edad) values ('"$_POST["nombre"]","$_POST["puesto"]","$_POST["edad"]"')";
-    if( $mysql->query($sql) ===   TRUE){
+    $sql = "INSERT into empleados (nombre, puesto, edad) values ('".$_POST["nombre"]."','".$_POST["puesto"]."','".$_POST["edad"]."')";
+    if( $mysql->query($sql) === TRUE){
         echo "1";
     }else{
-        echo "2";
+        echo "0";
     }
 }
 
