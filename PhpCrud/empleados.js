@@ -27,7 +27,21 @@ $(document).ready(function () {
         $.post('http://localhost/AjaxPhpJq/AjaxJS/PhpCrud/empleados.php',
         {"accion": "insertar",nombre,puesto,edad},
         function(data){
-            console.log(data);
+            if(data===1){
+                $('#nombre').val('');
+                $('#puesto').val('');
+                $('#edad').val('');
+                //fuerza un click
+                $('lista-tab').click();
+                //fuerza otro click
+                $('#leerEmpleados').click();
+            }
+            if(data==2){
+                console.log('error');
+                $('#nombre').val('');
+                $('#puesto').val('');
+                $('#edad').val('');
+            }
         });
     });
 });

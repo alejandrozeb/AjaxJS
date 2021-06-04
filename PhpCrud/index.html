@@ -11,20 +11,16 @@
     <div class="container mt-3">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+              <a class="nav-link active" id="lista-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
                 aria-selected="true">Lista</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+              <a class="nav-link" id="datos-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
                 aria-selected="false">Crear</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                aria-selected="false">Editar</a>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="lista-tab">
                 <button type="button" class="btn btn-primary" id="leerEmpleados">Leer empleados</button>
                 <div class="alert alert-primary" role="alert">
                   <ul id="listaEmpleados">
@@ -33,19 +29,19 @@
                 </div>      
             </div>
                 
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="datos-tab">
               <div class="form-group">
                 <label for="">Nombre</label>
                 <input type="text" class="form-control" id="nombre">
+                <input type="hidden" id="id">
                 <label for="">Puesto</label>
                 <input type="text" class="form-control" id="puesto">
                 <label for="">Edad</label>
                 <input type="text" class="form-control" id="edad">
                 <button type="button" class="btn btn-primary" id="crearEmpleado" >Crear</button>
+                <button type="button" class="btn btn-primary" id="editarEmpleado" >editar</button>
               </div>
             </div>
-
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quisquam saepe consequatur eveniet repudiandae velit!</div>
           </div>
     </div>
 
