@@ -10,8 +10,14 @@ $(document).ready(function () {
                      $('#listaEmpleados').html(
                         $('#listaEmpleados').html() +     
                     `
-                     <li> Nombre: ${item.nombre} </li>
-                     <li> Puesto: ${item.puesto} </li>
+                     <li> 
+                     <i class="fas fa-pencil-ruler" 
+                     data-id='${item.id}'
+                     data-id='${item.nombre}'
+                     data-id='${item.puesto}'
+                     data-id='${item.edad}'
+                     ></i> 
+                     Nombre: ${item.nombre} -- Puesto: ${item.puesto} -- Edad: ${item.edad}  </li>
                      `);
                 });
             }
@@ -43,5 +49,12 @@ $(document).ready(function () {
                 $('#edad').val('');
             }
         });
+    });
+
+    //evento al icono
+    //cuando se crea elementeos de manera dinamica se manejan de esta forma
+    $(document).on('click', '.fa-pencil-ruler', function(){
+        //seleccionamos el objeto
+        console.log($(this).data('id'));
     });
 });
