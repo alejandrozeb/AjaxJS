@@ -77,6 +77,15 @@ $(document).ready(function () {
         let puesto=$('#puesto').val();
         let edad=$('#edad').val();
         let id=$('#id').val();
+        $.post('http://localhost/AjaxPhpJq/AjaxJS/PhpCrud/empleados.php',{
+            "accion": "editar",
+            nombre,
+            puesto,
+            edad,
+            id
+        }, function (data) { 
+
+         });
 
         $('#lista-tab').click();
         $('#leerEmpleados').click();

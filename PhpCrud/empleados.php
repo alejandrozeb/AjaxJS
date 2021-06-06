@@ -25,6 +25,13 @@ if($_REQUEST['accion'] == 'leer'){
     }else{
         echo "0";
     }
+}else if($_REQUEST['accion'] == 'editar'){
+    $sql = "UPDATE empleados set nombre = '".$_POST["nombre"]."', puesto = '".$_POST["puesto"]."',edad = '".$_POST["edad"]."' where id = '".$_POST["id"]."';";
+    if( $mysql->query($sql) === TRUE){
+        echo "1";
+    }else{
+        echo "0";
+    }
 }
 
 
