@@ -59,8 +59,29 @@ $(document).ready(function () {
 
         //ocultamos el boton crear
         $('#crearEmpleado').addClass('d-none');
-        $('#editorEmpleado').removeClass('d-none');
+        $('#editarEmpleado').removeClass('d-none');
         $('#datos-tab').html('Editar');
         $('#datos-tab').click();
+        
+        $('#nombre').val($(this).data('nombre'));
+        $('#puesto').val($(this).data('puesto'));
+        $('#edad').val($(this).data('edad'));
+        $('#id').val($(this).data('id'));
+    });
+
+    //editar al back
+    $('#editarEmpleado').click(function (e) { 
+        e.preventDefault();
+
+        let nombre=$('#nombre').val();
+        let puesto=$('#puesto').val();
+        let edad=$('#edad').val();
+        let id=$('#id').val();
+
+        $('#lista-tab').click();
+        $('#leerEmpleados').click();
+        
+        $('#editarEmpleado').addClass('d-none');
+        $('#crearEmpleado').removeClass('d-none');
     });
 });
