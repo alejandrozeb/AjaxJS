@@ -13,9 +13,9 @@ $(document).ready(function () {
                      <li> 
                      <i class="fas fa-pencil-ruler" 
                      data-id='${item.id}'
-                     data-id='${item.nombre}'
-                     data-id='${item.puesto}'
-                     data-id='${item.edad}'
+                     data-nombre='${item.nombre}'
+                     data-puesto='${item.puesto}'
+                     data-edad='${item.edad}'
                      ></i> 
                      Nombre: ${item.nombre} -- Puesto: ${item.puesto} -- Edad: ${item.edad}  </li>
                      `);
@@ -55,6 +55,12 @@ $(document).ready(function () {
     //cuando se crea elementeos de manera dinamica se manejan de esta forma
     $(document).on('click', '.fa-pencil-ruler', function(){
         //seleccionamos el objeto
-        console.log($(this).data('id'));
+        //console.log($(this).data('id'));
+
+        //ocultamos el boton crear
+        $('#crearEmpleado').addClass('d-none');
+        $('#editorEmpleado').removeClass('d-none');
+        $('#datos-tab').html('Editar');
+        $('#datos-tab').click();
     });
 });
