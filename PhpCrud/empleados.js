@@ -99,6 +99,15 @@ $(document).ready(function () {
     $(document).on('click', '.fa-trash', function (e) { 
         e.preventDefault();
         let id = $(this).data('id');
-        console.log(id);
+        //console.log(id);
+
+        $.post("http://localhost/AjaxPhpJq/AjaxJS/PhpCrud/empleados.php", {
+            "accion": "borrar",
+            "id": id
+        },
+            function (data) {
+                console.log(data);    
+            }
+        );
      });
 });
