@@ -99,6 +99,7 @@ $(document).ready(function () {
     $(document).on('click', '.fa-trash', function (e) { 
         e.preventDefault();
         let id = $(this).data('id');
+        const linea = $(this).parent();
         //console.log(id);
 
         $.post("http://localhost/AjaxPhpJq/AjaxJS/PhpCrud/empleados.php", {
@@ -106,7 +107,7 @@ $(document).ready(function () {
             "id": id
         },
             function (data) {
-                console.log(data);    
+                linea.remove();    
             }
         );
      });
