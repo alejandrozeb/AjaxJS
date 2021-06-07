@@ -16,7 +16,8 @@ $(document).ready(function () {
                      data-nombre='${item.nombre}'
                      data-puesto='${item.puesto}'
                      data-edad='${item.edad}'
-                     ></i> 
+                     ></i>
+                     <i class="fas fa-trash" data-id='${item.id}'></i>
                      Nombre: ${item.nombre} -- Puesto: ${item.puesto} -- Edad: ${item.edad}  </li>
                      `);
                 });
@@ -93,4 +94,11 @@ $(document).ready(function () {
         $('#editarEmpleado').addClass('d-none');
         $('#crearEmpleado').removeClass('d-none');
     });
+
+    //eliminar un dato
+    $(document).on('click', '.fa-trash', function (e) { 
+        e.preventDefault();
+        let id = $(this).data('id');
+        console.log(id);
+     });
 });
